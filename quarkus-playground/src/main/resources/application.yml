@@ -1,0 +1,18 @@
+greeting:
+  message: "hello"
+
+"%dev":
+  quarkus:
+    log:
+      console:
+        json: false
+      file:
+        enable: true
+        path: log/quarkus/playground.log
+        format: "%d{yyyy-MM-dd HH:mm:ss} %-5p [%c] (%t) %s%e%n"
+        async: true
+    mongodb:
+      connection-string: mongodb://127.0.0.1:27017
+      database: TodoList
+    http:
+      port: 12345

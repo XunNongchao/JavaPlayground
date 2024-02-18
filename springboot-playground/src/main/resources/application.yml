@@ -1,0 +1,53 @@
+server:
+  port: 12345
+spring:
+  datasource:
+    username: root
+    password: '1313Ljjmtd4x**'
+    url: jdbc:mysql://localhost:3306/test
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    druid:
+      initial-size: 5
+      max-active: 8
+      min-idle: 3
+      max-wait: 1000
+      validation-query: 'select 1'
+      stat-view-servlet:
+        enabled: true
+        login-username: admin
+        login-password: 123456
+#    dynamic:
+#      primary: test
+#      druid:
+#        initial-size: 5
+#        max-active: 8
+#        min-idle: 3
+#        max-wait: 1000
+#        validation-query: 'select 1'
+#      datasource:
+#        test:
+#          username: root
+#          password: '1313Ljjmtd4x**'
+#          url: jdbc:mysql://localhost:3306/test
+#          driver-class-name: com.mysql.cj.jdbc.Driver
+#        meeting:
+#          username: root
+#          password: '1313Ljjmtd4x**'
+#          url: jdbc:mysql://localhost:3306/meeting
+#          driver-class-name: com.mysql.cj.jdbc.Driver
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/test
+
+pool:
+  thread:
+    # 线程池前缀名
+    thread-name-prefix: normal-thread-
+    # 核心线程数
+    core-size: 10
+    # 最大线程数
+    max-size: 20
+    # 线程池队列大小
+    queue-capacity: 1000
+    # 线程池存活时间（单位：秒）
+    keep-alive: 60

@@ -1,0 +1,38 @@
+### Task listAll
+GET {{base}}/task/listAll
+
+### Task persist
+POST {{base}}/task/persist
+Content-Type: application/json
+
+[
+  {
+    "title": "test11",
+    "content": "test11",
+    "color": "FFFFFF",
+    "status": "CREATED",
+    "deadline": "2024-10-01 10:00:00",
+    "createTime": "2024-02-07 16:10:00",
+    "updateTime": "2024-02-07 16:10:00"
+  },
+  {
+    "title": "test20",
+    "content": "test20",
+    "color": "000000",
+    "status": "CREATED",
+    "deadline": "2024-10-10 10:00:00",
+    "createTime": "2024-02-07 16:10:00",
+    "updateTime": "2024-02-07 16:10:00"
+  }
+]
+
+### Task deleteById
+DELETE {{base}}/task/deleteById/65c33b0c8dc91e5e0b9565c8
+
+### Task deleteSelective
+DELETE {{base}}/task/deleteSelective
+Content-Type: application/json
+
+{
+  "title": "test11"
+}
